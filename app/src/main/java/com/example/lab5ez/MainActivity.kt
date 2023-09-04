@@ -1,5 +1,6 @@
 package com.example.lab5ez
 
+import android.graphics.drawable.PaintDrawable
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -17,7 +18,9 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
+import androidx.compose.material3.Card
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.Text
@@ -26,10 +29,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.painter.Painter
+import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.modifier.modifierLocalConsumer
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -76,6 +83,312 @@ fun principal() {
                         )
                     }
 
+                }
+            }
+
+            Row() {
+                Box(modifier = Modifier.padding(6.dp)) {
+                    Text(
+                        text = "Tus Favoritos",
+                        modifier = Modifier
+                            .padding(12.dp),
+                        fontSize = 28.sp
+                    )
+                }
+
+            }
+
+            Box(modifier = Modifier)
+            {
+                Column() {
+                    Row() {
+                        Card(
+                            modifier = Modifier
+                                .width(185.dp)
+                                .height(240.dp)
+                                .padding(10.dp),
+                            shape = RoundedCornerShape(15.dp)
+                        ) {
+                            Box(modifier = Modifier.fillMaxSize()) {
+                                Image(
+                                    modifier = Modifier,
+                                    painter = painterResource(id = R.drawable.dualipa3),
+                                    contentDescription = null
+                                )
+                                Text(
+                                    modifier = Modifier.padding(top = 170.dp, start = 15.dp),
+                                    text = "Dua Lipa",
+                                    fontSize = 16.sp,
+                                    fontWeight = FontWeight.Bold
+                                )
+                                Text(
+                                    modifier = Modifier.padding(top = 190.dp, start = 15.dp),
+                                    text = "Majadas 11",
+                                    fontSize = 14.sp,
+                                )
+                            }
+                        }
+                        Card(
+                            modifier = Modifier
+                                .width(185.dp)
+                                .height(240.dp)
+                                .padding(10.dp),
+                            shape = RoundedCornerShape(15.dp)
+                        ) {
+                            Box(modifier = Modifier.fillMaxSize()) {
+                                Image(
+                                    modifier = Modifier,
+                                    painter = painterResource(id = R.drawable.taylorswit),
+                                    contentDescription = null
+                                )
+                                Text(
+                                    modifier = Modifier.padding(top = 170.dp, start = 15.dp),
+                                    text = "Taylor Swift",
+                                    fontSize = 16.sp,
+                                    fontWeight = FontWeight.Bold
+                                )
+                                Text(
+                                    modifier = Modifier.padding(top = 190.dp, start = 15.dp),
+                                    text = "Estadio Mateo Flores",
+                                    fontSize = 14.sp,
+                                )
+                            }
+                        }
+                    }
+
+                    Row() {
+                        Card(
+                            modifier = Modifier
+                                .width(185.dp)
+                                .height(240.dp)
+                                .padding(10.dp),
+                            shape = RoundedCornerShape(15.dp)
+                        ) {
+                            Box(modifier = Modifier.fillMaxSize()) {
+                                Image(
+                                    modifier = Modifier,
+                                    painter = painterResource(id = R.drawable.enanosverdes),
+                                    contentDescription = null
+                                )
+                                Text(
+                                    modifier = Modifier.padding(top = 170.dp, start = 15.dp),
+                                    text = "Enanitos Verdes",
+                                    fontSize = 16.sp,
+                                    fontWeight = FontWeight.Bold
+                                )
+                                Text(
+                                    modifier = Modifier.padding(top = 190.dp, start = 15.dp),
+                                    text = "Casa de Kou",
+                                    fontSize = 14.sp,
+                                )
+                            }
+                        }
+                        Card(
+                            modifier = Modifier
+                                .width(185.dp)
+                                .height(240.dp)
+                                .padding(10.dp),
+                            shape = RoundedCornerShape(15.dp)
+                        ) {
+                            Box(modifier = Modifier.fillMaxSize()) {
+                                Image(
+                                    modifier = Modifier,
+                                    painter = painterResource(id = R.drawable.vicentefernandez2),
+                                    contentDescription = null
+                                )
+                                Text(
+                                    modifier = Modifier.padding(top = 170.dp, start = 15.dp),
+                                    text = "Vicente Fernandez",
+                                    fontSize = 16.sp,
+                                    fontWeight = FontWeight.Bold
+                                )
+                                Text(
+                                    modifier = Modifier.padding(top = 190.dp, start = 15.dp),
+                                    text = "Cayala",
+                                    fontSize = 14.sp,
+                                )
+                            }
+                        }
+                    }
+                    Row() {
+                        Card(
+                            modifier = Modifier
+                                .width(185.dp)
+                                .height(240.dp)
+                                .padding(10.dp),
+                            shape = RoundedCornerShape(15.dp)
+                        ) {
+                            Box(modifier = Modifier.fillMaxSize()) {
+                                Image(
+                                    modifier = Modifier,
+                                    painter = painterResource(id = R.drawable.skrillex),
+                                    contentDescription = null
+                                )
+                                Text(
+                                    modifier = Modifier.padding(top = 170.dp, start = 15.dp),
+                                    text = "Skrillex",
+                                    fontSize = 16.sp,
+                                    fontWeight = FontWeight.Bold
+                                )
+                                Text(
+                                    modifier = Modifier.padding(top = 190.dp, start = 15.dp),
+                                    text = "EMF",
+                                    fontSize = 14.sp,
+                                )
+                            }
+                        }
+                        Card(
+                            modifier = Modifier
+                                .width(185.dp)
+                                .height(240.dp)
+                                .padding(10.dp),
+                            shape = RoundedCornerShape(15.dp)
+                        ) {
+                            Box(modifier = Modifier.fillMaxSize()) {
+                                Image(
+                                    modifier = Modifier.size(165.dp),
+                                    painter = painterResource(id = R.drawable.djgura2),
+                                    contentDescription = null
+                                )
+                                Text(
+                                    modifier = Modifier.padding(top = 170.dp, start = 15.dp),
+                                    text = "DJ GURA",
+                                    fontSize = 16.sp,
+                                    fontWeight = FontWeight.Bold
+                                )
+                                Text(
+                                    modifier = Modifier.padding(top = 190.dp, start = 15.dp),
+                                    text = "Meza's Grill",
+                                    fontSize = 14.sp,
+                                )
+                            }
+                        }
+                    }
+                }
+            }
+            Row() {
+                Box(modifier = Modifier.padding(6.dp)) {
+                    Text(
+                        text = "Todos los conciertos",
+                        modifier = Modifier
+                            .padding(12.dp),
+                        fontSize = 28.sp
+                    )
+                }
+
+            }
+            Box(modifier = Modifier)
+            {
+                Column() {
+                    Row() {
+                        Card(
+                            modifier = Modifier
+                                .width(185.dp)
+                                .height(240.dp)
+                                .padding(10.dp),
+                            shape = RoundedCornerShape(15.dp)
+                        ) {
+                            Box(modifier = Modifier.fillMaxSize()) {
+                                Image(
+                                    modifier = Modifier,
+                                    painter = painterResource(id = R.drawable.deadmau5),
+                                    contentDescription = null
+                                )
+                                Text(
+                                    modifier = Modifier.padding(top = 170.dp, start = 15.dp),
+                                    text = "Deadmau5",
+                                    fontSize = 16.sp,
+                                    fontWeight = FontWeight.Bold
+                                )
+                                Text(
+                                    modifier = Modifier.padding(top = 190.dp, start = 15.dp),
+                                    text = "Tomorrowland",
+                                    fontSize = 14.sp,
+                                )
+                            }
+                        }
+                        Card(
+                            modifier = Modifier
+                                .width(185.dp)
+                                .height(240.dp)
+                                .padding(10.dp),
+                            shape = RoundedCornerShape(15.dp)
+                        ) {
+                            Box(modifier = Modifier.fillMaxSize()) {
+                                Image(
+                                    modifier = Modifier,
+                                    painter = painterResource(id = R.drawable.meli),
+                                    contentDescription = null
+                                )
+                                Text(
+                                    modifier = Modifier.padding(top = 170.dp, start = 15.dp),
+                                    text = "Esposo de Meli",
+                                    fontSize = 16.sp,
+                                    fontWeight = FontWeight.Bold
+                                )
+                                Text(
+                                    modifier = Modifier.padding(top = 190.dp, start = 15.dp),
+                                    text = "El Cielo",
+                                    fontSize = 14.sp,
+                                )
+                            }
+                        }
+                    }
+
+                    Row() {
+                        Card(
+                            modifier = Modifier
+                                .width(185.dp)
+                                .height(240.dp)
+                                .padding(10.dp),
+                            shape = RoundedCornerShape(15.dp)
+                        ) {
+                            Box(modifier = Modifier.fillMaxSize()) {
+                                Image(
+                                    modifier = Modifier,
+                                    painter = painterResource(id = R.drawable.enanosverdes),
+                                    contentDescription = null
+                                )
+                                Text(
+                                    modifier = Modifier.padding(top = 170.dp, start = 15.dp),
+                                    text = "Enanitos Verdes",
+                                    fontSize = 16.sp,
+                                    fontWeight = FontWeight.Bold
+                                )
+                                Text(
+                                    modifier = Modifier.padding(top = 190.dp, start = 15.dp),
+                                    text = "Casa de Kou",
+                                    fontSize = 14.sp,
+                                )
+                            }
+                        }
+                        Card(
+                            modifier = Modifier
+                                .width(185.dp)
+                                .height(240.dp)
+                                .padding(10.dp),
+                            shape = RoundedCornerShape(15.dp)
+                        ) {
+                            Box(modifier = Modifier.fillMaxSize()) {
+                                Image(
+                                    modifier = Modifier,
+                                    painter = painterResource(id = R.drawable.vicentefernandez2),
+                                    contentDescription = null
+                                )
+                                Text(
+                                    modifier = Modifier.padding(top = 170.dp, start = 15.dp),
+                                    text = "Vicente Fernandez",
+                                    fontSize = 16.sp,
+                                    fontWeight = FontWeight.Bold
+                                )
+                                Text(
+                                    modifier = Modifier.padding(top = 190.dp, start = 15.dp),
+                                    text = "Cayala",
+                                    fontSize = 14.sp,
+                                )
+                            }
+                        }
+                    }
                 }
             }
         }
