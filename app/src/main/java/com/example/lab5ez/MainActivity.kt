@@ -377,7 +377,7 @@ fun principal() {
                                 )
                                 Text(
                                     modifier = Modifier.padding(top = 170.dp, start = 15.dp),
-                                    text = "Luisa G",
+                                    text = "NandaDJ",
                                     fontSize = 16.sp,
                                     fontWeight = FontWeight.Bold
                                 )
