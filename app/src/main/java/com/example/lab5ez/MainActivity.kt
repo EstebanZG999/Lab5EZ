@@ -346,18 +346,18 @@ fun principal() {
                             Box(modifier = Modifier.fillMaxSize()) {
                                 Image(
                                     modifier = Modifier,
-                                    painter = painterResource(id = R.drawable.enanosverdes),
+                                    painter = painterResource(id = R.drawable.pipozach4),
                                     contentDescription = null
                                 )
                                 Text(
                                     modifier = Modifier.padding(top = 170.dp, start = 15.dp),
-                                    text = "Enanitos Verdes",
+                                    text = "Pipo Zachrisson",
                                     fontSize = 16.sp,
                                     fontWeight = FontWeight.Bold
                                 )
                                 Text(
                                     modifier = Modifier.padding(top = 190.dp, start = 15.dp),
-                                    text = "Casa de Kou",
+                                    text = "Zona 6",
                                     fontSize = 14.sp,
                                 )
                             }
@@ -372,18 +372,18 @@ fun principal() {
                             Box(modifier = Modifier.fillMaxSize()) {
                                 Image(
                                     modifier = Modifier,
-                                    painter = painterResource(id = R.drawable.vicentefernandez2),
+                                    painter = painterResource(id = R.drawable.luisag2),
                                     contentDescription = null
                                 )
                                 Text(
                                     modifier = Modifier.padding(top = 170.dp, start = 15.dp),
-                                    text = "Vicente Fernandez",
+                                    text = "Luisa G",
                                     fontSize = 16.sp,
                                     fontWeight = FontWeight.Bold
                                 )
                                 Text(
                                     modifier = Modifier.padding(top = 190.dp, start = 15.dp),
-                                    text = "Cayala",
+                                    text = "Tomorrowland",
                                     fontSize = 14.sp,
                                 )
                             }
